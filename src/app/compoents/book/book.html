@@ -1,0 +1,26 @@
+<div>
+  <h2>Books</h2>
+  @if (loading$ | async) {
+    <div>loading books...</div>
+  }
+  @if (error$ | async; as error) {
+    <div>{{ error }}</div>
+  }
+  @if (allBooks$ | async; as allBooks) {
+    @if (allBooks.length > 0) {
+        <div class="bookcontent">
+              @for (b of allBooks; track b.id) {
+        <div class="card">
+          <div>id:{{ b.id }}</div>
+          <div>title:{{ b.title }}</div>
+          <div>author:{{ b.author }}</div>
+          <div>price:{{ b.price }}</div>
+          <button (click)="addBook(b.id)">Add Book</button>
+        </div>
+      }
+        </div>
+    
+    }
+  }
+ 
+</div>

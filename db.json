@@ -1,0 +1,28 @@
+{
+    "books": [
+        {
+            "id": "book 1",
+            "title": "Bahubali",
+            "author": "Rajamouli",
+            "price": 100
+        },
+        {
+            "id": "book 2",
+            "title": "Busness man",
+            "author": "Puri jagannath",
+            "price": 120
+        },
+        {
+            "id": "book 3",
+            "title": "Jalsa",
+            "author": "Trivikram",
+            "price": 80
+        },
+        {
+            "id": "book 4",
+            "title": "Aadi",
+            "author": "Vinayak",
+            "price": 90
+        }
+    ]
+}

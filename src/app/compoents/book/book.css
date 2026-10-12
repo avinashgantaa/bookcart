@@ -1,0 +1,12 @@
+:host{
+    font-size: 1rem;
+}
+.card{
+    padding: 5px;
+    box-sizing: border-box;
+}
+.bookcontent{
+    display: flex;
+    
+}
+

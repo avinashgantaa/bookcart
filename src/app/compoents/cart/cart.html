@@ -1,0 +1,42 @@
+<div>
+  <h2>cart data</h2>
+  @if (cartItem$ | async; as items) {
+    <div class="card">
+      @if (items.length == 0) {
+        <div>No data Available</div>
+      }
+      @else {
+          <table class="table">
+            <thead>
+              <tr>
+                <th>title</th>
+                <th>Author</th>
+                <th>Quantity</th>
+                <th>price</th>
+                <th>Line Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (i of items; track i.id) {
+                <tr>
+                  <td>{{ i.title }}</td>
+                  <td>{{ i.author }}</td>
+                  <td>
+                    <button (click)="addItem(i.id)">+</button>
+                    {{ i.quantity }}
+                    <button (click)="deleteItem(i.id)">-</button>
+                  </td>
+                  <td>{{ i.price }}</td>
+                  <td>{{ i.lineTotal }}</td>
+                </tr>
+              }
+            </tbody>
+          </table>
+          <div>{{ cartValue$ | async }}</div>
+          <button (click)="clear()">clear</button>
+
+      }
+
+    </div>
+  }
+</div>
